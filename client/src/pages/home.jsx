@@ -1,9 +1,14 @@
 import {motion, AnimatePresence} from 'framer-motion'
 import {useSnapshot} from 'valtio'
-import {headContainerAnimation, headContentAnimation, haedTextAnimation, slideAnimation} from '../config/motion'
+import state from '../store' 
 const home = () => {
+  const snap=useSnapshot(state);
   return (
-    <div>home</div>
+    <AnimatePresence>
+      {snap.intro && (<motion.div className="home" {...slideAnimation('left')}>
+
+      </motion.div>)}
+    </AnimatePresence>
   )
 }
 
