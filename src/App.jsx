@@ -1,9 +1,14 @@
-
+import canvas from './canvas'
+import customizer from './pages/customizer'
+import home from './pages/home'
 function App() {
   return (
-    <div>
-      <h1 classname="head-text">Hello World</h1>
-    </div>
+    <main classname="app transition-all ease-in">
+      <home/>
+      <canvas/> 
+      <customizer/>
+    </main>
+    
   )
 }
 
